@@ -1,0 +1,50 @@
+﻿@model GarageDatabse.Models.Vehicle
+
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<h2>CheckOut</h2>
+
+<div>
+    <h4>Vehicle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner.PersonalNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner.PersonalNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingSpot.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingSpot.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleType.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleType.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
